@@ -3,8 +3,8 @@ function sendRequest(method, url, data, callback) {
   let xhr = new XMLHttpRequest();
   xhr.open(method, url, true);
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  
-  xhr.onreadystatechange = function() {
+
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       try {
         const response = JSON.parse(xhr.responseText);
@@ -18,9 +18,9 @@ function sendRequest(method, url, data, callback) {
       }
     }
   };
-  
+
   xhr.timeout = 5000;
-  xhr.ontimeout = function() {
+  xhr.ontimeout = function () {
     callback(false, 'Server unreachable');
   };
 
@@ -54,7 +54,7 @@ function loginToServer(username, password, callback) {
 function addDownloadPackage(name, url, callback) {
   const safeName = name.replace(/[^a-z0-9._\-]/gi, '_');
   const data = { name: `"${encodeURIComponent(safeName)}"`, links: `[ "${encodeURIComponent(url)}" ]` };
-  
+
   sendRequest('POST', `${origin}/api/addPackage`, data, (success, response) => {
     if (success) {
       callback(true);
@@ -117,4 +117,3 @@ document.getElementById('save').addEventListener('click', () => {
     });
   });
 });
-

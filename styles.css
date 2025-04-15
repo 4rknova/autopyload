@@ -31,30 +31,53 @@ h1 {
   margin-bottom: 20px;
   color: #fff;
   position: relative;
-  padding-left: 40px;  /* Add space for the icon */
+  opacity: 0;
+  text-transform: uppercase;
+  animation: slideIn 1s ease-out forwards;
 }
 
-h1::before {
-  content: '';
-  position: absolute;
-  left: 10px;  /* Adjust for icon position */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px;  /* Adjust icon size */
-  height: 24px;
-  background-image: url('icon.png');  /* Path to the icon */
-  background-size: contain;
-  background-repeat: no-repeat;
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+  max-height: 500px;
+  /* Limit the height when visible */
 }
 
 label {
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0.25rem;
+  font-weight: 600;
   color: #ddd;
 }
 
@@ -114,8 +137,72 @@ input:focus::placeholder {
     font-size: 20px;
   }
 
-  input, button {
+  input,
+  button {
     font-size: 14px;
   }
 }
 
+/* Sleep Slider Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #5f9ea0;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-btn {
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #777;
+}
