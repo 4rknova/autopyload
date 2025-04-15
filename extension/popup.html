@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPyLoad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="inner-container">
+      <div class="section">
+        <button type="button" id="save">
+          <img src="res/plus.svg" alt="Add to Queue" />
+        </button>
+        <div class="section-buttons">
+          <button id="open-settings" title="Settings">
+            <img src="res/cog.svg" alt="Settings" />
+          </button>
+          <button id="open-history" title="History">
+            <img src="res/history.svg" alt="History" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="inner-container">
+      <div class="section">
+        <div class="status-container">
+          <p id="status" class="status-msg">Ready!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="inner-container">
+      <div class="section">
+        <div class="title" id="title"></div>
+        <div class="version">v<span id="version"></span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

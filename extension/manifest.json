@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "AutoPyLoad",
+  "version": "1.1",
+  "description": "Adds current tab's URL to pyLoad server queue",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "res/icon-16.png",
+      "32": "res/icon-32.png",
+      "48": "res/icon-48.png",
+      "128": "res/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "res/icon-16.png",
+    "32": "res/icon-32.png",
+    "48": "res/icon-48.png",
+    "128": "res/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "settings.html",
+        "icons/*.svg",
+        "styles.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

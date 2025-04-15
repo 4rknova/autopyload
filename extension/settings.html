@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoPyloader - Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="settings">
+    <div class="">
+        <div id="formContainer" class="form-container">
+            <h1>Settings</h1>
+            <form>
+                <div class="form-group">
+                    <label for="host">Host</label>
+                    <input type="text" id="host" name="host" placeholder="Enter PyLoad Host">
+                </div>
+                <div class="form-group">
+
+                    <label for="port">Port</label>
+                    <input type="text" id="port" name="port" placeholder="Enter Port (default 8000)">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password">
+                </div>
+            </form>
+        </div>
+        <button id="save-settings">Save</button>
+        <p id="status" class="status-msg"></p>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+
+</html>
