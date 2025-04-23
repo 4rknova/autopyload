@@ -18,8 +18,11 @@ Use the supplied Makefile to build the extension.
 ```bash
 make build
 ```
+## Install from Chrome Web Store
 
-## Installation from source
+The extension is release in [Chrome Web Store](https://chromewebstore.google.com/detail/autopyload/ilcjfjpgoaeggpalbjbfiacnedimkodm)
+
+## Install manually from source
 
 1. Clone the repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
