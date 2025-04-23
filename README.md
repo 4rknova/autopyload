@@ -20,7 +20,7 @@ make build
 ```
 ## Install from Chrome Web Store
 
-The extension is release in [Chrome Web Store](https://chromewebstore.google.com/detail/autopyload/ilcjfjpgoaeggpalbjbfiacnedimkodm)
+The extension is available in [Chrome Web Store](https://chromewebstore.google.com/detail/autopyload/ilcjfjpgoaeggpalbjbfiacnedimkodm)
 
 ## Install manually from source
 
