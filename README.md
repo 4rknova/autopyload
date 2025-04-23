@@ -1,42 +1,44 @@
 # AutoPyLoad
 
-A simple Chrome extension to automatically add current url in a PyLoad server queue.
+A lightweight Chrome extension that lets you quickly send the current URL to your PyLoad server.
 
 ![Screenshot](./media/sample.png)
 
 ## Features
 
-- Add current url to PyLoad server queue.
+- Instantly add the current URL to your PyLoad queue
 - View history of added urls.
 - Clear history of added urls.
-- Settings to configure PyLoad server url and api key.
+- Configure PyLoad server url and credentials.
 
-## Build
+## Building
 
-Use the supplied Makefile to build the extension.
+To build the extension, use the provided Makefile:
 
 ```bash
 make build
 ```
-## Install from Chrome Web Store
+## Installation 
 
-The extension is available in [Chrome Web Store](https://chromewebstore.google.com/detail/autopyload/ilcjfjpgoaeggpalbjbfiacnedimkodm)
+### Chrome Web Store
 
-## Install manually from source
+Available now on the [Chrome Web Store](https://chromewebstore.google.com/detail/autopyload/ilcjfjpgoaeggpalbjbfiacnedimkodm)
 
-1. Clone the repository.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Click on "Load unpacked" and select the cloned repository folder.
+### Manual from Source
 
-## Usage
+1. Clone this repository.
+2. Open Chrome and go to chrome://extensions/.
+3. Enable "Developer mode".
+4. Click 'Load unpacked' and select the project folder.
 
-1. Open Chrome and navigate to `chrome://extensions/`.
-2. Click on "AutoPyLoad" extension.
-3. Click on the 'cog' icon to open the settings page and configure the PyLoad server url and login credentials.
-4. Click on the 'history' icon to open the history page and view the history of added urls.
-3. Click on "Add to PyLoad" button to add the current url to the PyLoad server queue.
-4. Open PyLoad and see the added url in the queue.
+## How to use
+
+1. Open the AutoPyLoad extension from the Chrome extensions menu.
+2. Click the 'cog' icon to set your PyLoad server URL and API key.
+3. Click the 'history' icon to view your URL history.
+4. Use the 'add' button to queue the current tab’s URL.
+5. Optionally, visit your PyLoad dashboard to confirm the URL has been added.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Licensed under the [MIT License](LICENSE).
